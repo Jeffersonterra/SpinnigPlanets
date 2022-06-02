@@ -1,0 +1,274 @@
+#circle-orbit-container{
+    position: relative;
+    top: 25px;
+    left: 25px;
+    height: 300px;
+    width: 300px;
+    
+    background-color: black;
+}
+#inner-orbit{
+position: absolute;
+top: 65px;
+left: 65px;
+width: 150px;
+height: 150px;
+/*makes a line in the div's border*/
+border: 2px #4A437F dashed;
+/*makes de border round*/
+border-radius: 100%;
+/*make animation*/
+
+-webkit-animation: spin-right 5s linear infinite;
+animation: spin-right 5s linear infinite;
+}
+.inner-orbit-circles{
+    position: absolute;
+    top: 62px;
+    left: -12px;
+    /*"planet's" size and color below, higher radius makes it rounder.*/
+    width: 25px;
+    height: 25px;
+    background-color: #4A437F;
+    border-radius: 100%;
+    
+}
+#middle-orbit{
+
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 200px;
+    height: 200px;
+    /*makes a line in the div's border*/
+    border: 2px #333147 dashed;
+    /*makes de border round*/
+    border-radius: 100%;
+    /*make animation*/
+    
+    -webkit-animation: spin-right 10s linear infinite;
+    animation: spin-right 10s linear infinite;
+
+}
+.middle-orbit-circles{
+    position: absolute;
+    top: 50px;
+    left: 180px;
+    /*"planet's" size and color below, higher radius makes it rounder.*/
+    width: 28px;
+    height: 28px;
+    background-color: #333147;
+    border-radius: 100%;
+
+  
+
+   
+}
+
+#blue-orbit{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 260px;
+    height: 260px;
+    border: 2px #075794 dashed;
+    border-radius: 100%;
+    
+    -webkit-animation: spin-right 35s linear infinite;
+    animation: spin-right 35s linear infinite;
+}
+#guidelua{
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    background-color:transparent;
+    border-radius: 100%;
+}
+
+#guide{
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 40px;
+    height: 40px;
+    border: 2px transparent dashed;
+    border-radius: 100%;
+}
+.blue-orbit-circles{
+    position: absolute;
+    top: -17px;
+    left: 125px;
+    width: 30px;
+    height: 30px;
+    background-color: #075794;
+    border-radius: 100%;
+
+    
+
+}
+.lua{
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 100%;
+    animation: giralua 10s infinite linear;
+
+}
+#sun{
+    position: absolute;
+    top:120px;
+    left:120px;
+    width: 42px;
+    height: 42px;
+    background-color: #dd0e12;
+    border-radius: 100%;
+}
+#flare {
+    position: absolute;
+    top:5px;
+    left:35px;
+    width: 10px;
+    height: 10px;
+    background-color: #cd2601;
+    border-radius: 100%;
+    animation: repositioningflares 100s infinite linear;
+}
+#flare2 {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 8px;
+    height: 5px;
+    background-color: #cb1212;
+    border-radius: 100%;
+    animation: repositioningflares 20s infinite linear;
+    
+
+}
+/*cb1212*/
+#flare3 {
+    position: absolute;
+    top: 27px;
+    left: 25px;
+    width: 10px;
+    height: 12px;
+    background-color: #cb1212;
+    border-radius: 100%;
+    animation: repositioningflares 5s infinite linear;
+}
+@-webkit-keyframes spin-right {
+100% {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}}
+
+/*cb1212*/
+/*20.20
+-30.0
+6.6
+5.35
+*/
+@keyframes repositioningflares {
+    0% {
+
+        top: 27px;
+        left: 25px;
+    }
+
+    10% {
+
+        top: 10px;
+        left: -11px;
+    }
+
+    20% {
+        top: 20px;
+        left: 22px;
+    }
+    
+    30% {
+        
+        top: -2px;
+        left: 22px;
+    }
+    
+    40% {
+        
+        top: 0px;
+        left: 30px;
+    }
+    
+    50% {
+        top: 7px;
+        left: 7px;
+    }
+    60% {
+        
+        top: 0px;
+        left: 4px;
+    }
+    
+    70% {
+        
+        top: 0px;
+        left: 10px;
+        
+    }
+    
+    80% {
+        top: 10px;
+        left: -5px;
+    }
+    
+    
+    90% {
+        
+        top: 20px;
+        left: 10x;
+    }
+    95% {
+        
+        top: 24px;
+        left: 20px;
+    }
+    100% {
+        
+        top: 27px;
+        left: 25px;
+    } 
+}
+@keyframes giralua{
+    0% { top: 10px;
+        left: 30px;}
+    12.5%{top: 25px;
+        left: 25px;
+
+    }
+    25%{top: 30px;
+            left: 10px;
+    }    
+    37.5% {top: 25px;
+        left:-5px;
+
+    }
+    50%{top: 10px;
+        left: -10px;}
+    62.5%{top: -4px;
+        left: -8px;}
+        
+    75%{top: -10px;
+        left: 10px;}
+    87.5%{top: -8px;
+            left: 20px;
+        }
+    100%{top: 10px;
+        left: 30px;}
+}
